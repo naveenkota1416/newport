@@ -1,0 +1,505 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    color: rgb(207, 220, 231);
+    font-family:'Times New Roman', Times, serif;
+ 
+background: #3F2F66;
+background: linear-gradient(135deg, #3F2F66, #645BC1);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    animation: slideRight 1s forwards;
+}
+
+.navbar {
+    display: flex; /* Ensure that the navbar items are aligned horizontally */
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.navbar a:hover {
+    color: aqua;
+}
+
+
+/* Home Section */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+    background-size: cover;
+    background-position: center;
+ 
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 3px 0;
+}
+
+.home-content h3 span {
+    color: aqua;
+}
+
+.home1 {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.home1 a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    font-size: 20px;
+    color: aqua;
+    margin-right: 15px;
+    text-align: center;
+    line-height: 40px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.home1 a:hover {
+    background: aqua;
+    color: black;
+    box-shadow: 0 0 20px aqua;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 20px;
+    background: aqua;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px aqua, 0 0 25px aqua, 0 0 50px aqua, 0 0 100px aqua, 0 0 200px aqua;
+}
+
+.image {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.image img{
+              margin-left: 150px;
+}
+.image .boy {
+    height: 50%;
+    position: absolute;
+    left: 28%;
+    top: 0;
+    margin-top: 135px;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.image:hover .shape {
+    bottom: 40px;
+}
+
+.image:hover .boy {
+    left: 45%;
+    
+}
+
+/* About Section */
+
+.about {
+    background: url(images/about.background1111.png);
+    background-repeat: no-repeat;
+    background-size: 400px 400px; /* Size of the background image */
+    background-position-x: 100px;
+    background-position-y: 70px; /* Center the background image */
+    color: white;
+    padding: 50px 0;
+    width: 100%; 
+    height: 500px; 
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.about-img {
+    flex: 1;
+    display: flex;           
+    justify-content: center; 
+    align-items: center;  
+   
+   
+    
+}
+
+.about-img img {
+   width: 375px;
+   height: 265px;
+   margin-top: 100px;
+   margin-right: 130px;
+   
+    
+
+}
+
+.about-text {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-text h2 span {
+    color: #ff6347;
+}
+
+.about-text h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+  
+    
+}
+
+/* Skills Section */
+
+.skills {
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 50px;
+    
+   
+}
+
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff6347;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the flip cards */
+}
+
+.flip-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Provides a perspective for the flip effect */
+    background-color: transparent; /* Transparent background */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Maintains the 3D effect */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Flips the card on hover */
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when flipped */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flip-card-front {
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+}
+
+.flip-card-back {
+    background-color: rgba(0, 0, 0, 0.8); /* More opaque background for visibility */
+    transform: rotateY(180deg); /* Position the back side to face the user when flipped */
+}
+
+.flip-card-back ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flip-card-back li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+
+
+
+
+/* Projects Section */
+
+
+.projects h5{
+              color: #ff6347;
+              margin-left: 45%;
+              font-size: 36px;
+              margin-top: 20px;
+              
+}
+.projects h3{
+    margin-top: 20px;
+    margin-left: 45%;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 200px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.Designing {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.Designing h3 {
+    
+    margin-top: 20px;
+    margin-left: 45%;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 200px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.flip-card1 {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.flip-card-inner1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card1:hover .flip-card-inner1 {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front1, .flip-card-back1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front1 {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flip-card-front1 img {
+    width: 50%;
+    height: auto;
+}
+
+.flip-card-back1 {
+    background-color: rgb(136, 81, 124);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.flip-card-back1 h2, .flip-card-back1 p, .flip-card-back1 a {
+    margin: 10px 0;
+}
+
+.flip-card-back1 a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.flip-card-back1 a:hover {
+    color: #ddd;
+}
+
+button {
+    background-color: #2966eb;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Contact Section */
+/* Contact Section Styles */
+.contact {
+    
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #2966eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #1a4d8e;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-info a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}

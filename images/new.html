@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexagon with Neon Effect</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        /* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Background color for better neon visibility */
+}
+
+/* Hexagon Container */
+.hexagon-container {
+    position: relative;
+    width: 100px; /* Width of the hexagon */
+    height: 57.74px; /* Height of the hexagon */
+}
+
+/* Hexagon Shape */
+.hexagon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0ff; /* Neon color */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Text color */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, 0 0 20px #0ff, 0 0 25px #0ff, 0 0 30px #0ff, 0 0 35px #0ff;
+}
+
+/* Optional: Additional Neon Glow Effect */
+.hexagon-container::before, .hexagon-container::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.hexagon-container::before {
+    border-bottom: 28.87px solid #0ff; /* Adjust as needed */
+    top: -28.87px; /* Position */
+    left: 0;
+}
+
+.hexagon-container::after {
+    border-top: 28.87px solid #0ff; /* Adjust as needed */
+    bottom: -28.87px; /* Position */
+    left: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="hexagon-container">
+        <div class="hexagon">N</div>
+    </div>
+</body>
+</html>

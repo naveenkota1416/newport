@@ -169,11 +169,9 @@ a {
 /* About Section */
 
 .about {
-    background: url(images/about.background1111.png);
-    background-repeat: no-repeat;
-    background-size: 400px 400px; /* Size of the background image */
-    background-position-x: 100px;
-    background-position-y: 70px; /* Center the background image */
+    
+    
+  
     color: white;
     padding: 50px 0;
     width: 100%; 

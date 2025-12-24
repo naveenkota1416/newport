@@ -257,7 +257,7 @@ a {
 .flip-card {
     width: 300px;
     height: 250px;
-    border-radius: 20px
+    border-radius: 20px;
     perspective: 1000px; /* Provides a perspective for the flip effect */
     background-color: transparent; /* Transparent background */
 }
